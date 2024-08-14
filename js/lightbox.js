@@ -21,6 +21,21 @@ $(document).ready(function () {
 
     // 클릭 이벤트 연결
     $(".paper").click(function () {
+        // 클릭된 .paper 자손의 .paper-content 요소의 자손의 a 태그의 자손의 img 요소의 src 속성값을 가져옴
+        let userImgSrc = $(this).find(".paper-content a img").attr("src");
+        // #lightbox의 .user-information의 a 태그의 img 요소의 src 속성값을 userImgSrc로 설정
+        $("#lightbox .user-information a img")
+            .attr("src", userImgSrc)
+            .css({ width: 70, height: 70 });
+
+        let userContent = $(this).find(".paper-description").html();
+        $("#lightbox .user-information-text p").html(userContent);
+
+        let mainImgSrc = $(this).find(".paper-holder a img").attr("src");
+        $("#lightbox > img")
+            .attr("src", mainImgSrc)
+            .css({ width: 600, height: 750 });
+
         showLightBox();
     });
 
