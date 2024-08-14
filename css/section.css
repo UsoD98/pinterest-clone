@@ -1,0 +1,62 @@
+/* paper style */
+.paper {
+    width: 190px;
+    margin-top: 10px;
+    padding: 15px 15px 0;
+    font-size: 11px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+.paper-content {
+    margin: 0 -15px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #f2f0f0;
+    overflow: hidden;
+}
+.paper-description {
+    margin: 10px 0;
+}
+.paper-link {
+    display: block;
+    float: left;
+}
+.paper-text {
+    float: left;
+    width: 150px;
+    margin-left: 10px;
+}
+
+/* section */
+#main-section {
+    width: 920px;
+    margin: 0 auto;
+}
+
+/* 세 줄 */
+@media (max-width: 919px) {
+    #main-section {
+        width: 690px;
+    }
+}
+
+/* 네 줄 */
+@media (min-width: 930px) and (max-width: 1149px) {
+    #main-section {
+        width: 920px;
+    }
+}
+
+/* 다섯 줄 */
+@media (min-width: 1150px) and (max-width: 1379px) {
+    #main-section {
+        width: 1150px;
+    }
+}
+
+/* 여섯 줄 */
+@media (min-width: 1380px) {
+    #main-section {
+        width: 1380px;
+    }
+}
